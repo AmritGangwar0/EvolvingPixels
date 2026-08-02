@@ -51,3 +51,28 @@
     const n = parseInt(hex.slice(1),16);
     return `rgba(${(n>>16)&255},${(n>>8)&255},${n&255},${alpha})`;
                            }
+
+                 // ---------- spawn / DOM creation ----------
+  const DEFAULT_LIPO_W = 30, DEFAULT_LIPO_H = 30;
+  const DEFAULT_ANIMAL_W = 36, DEFAULT_ANIMAL_H = 36;
+
+  function spawnLipo(saved){
+    const w = saved?.width ?? DEFAULT_LIPO_W;
+    const h = saved?.height ?? DEFAULT_LIPO_H;
+    const x = saved?.x ?? rand(w/2, area.clientWidth - w/2);
+    const y = saved?.y ?? rand(h/2, area.clientHeight - h/2);
+    const el = document.createElement('div');
+    el.className = 'entity lipo';
+    el.style.width = w + 'px';
+    el.style.height = h + 'px';
+    el.style.background = COLORS.lipo;
+    el.style.borderRadius = '6px';
+    el.style.zIndex = 4;
+    area.appendChild(el);
+    const L = { id: uid(), x, y, width: w, height: h, el };
+    positionLipo(L);
+    lipos.push(L);
+    return L;
+  }
+  function positionLipo(l){ if (l.el) { l.el.style.left = l.x + 'px'; l.el.style.top = l.y + 'px'; } }
+  
