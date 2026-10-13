@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.16)
+project(HerbivoreHerbsEvolution LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+add_executable(herbivore_herbs_server src/server.cpp)
+target_compile_options(herbivore_herbs_server PRIVATE -Wall -Wextra -Wpedantic)
+find_package(Threads REQUIRED)
+target_link_libraries(herbivore_herbs_server PRIVATE Threads::Threads)

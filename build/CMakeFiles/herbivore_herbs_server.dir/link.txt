@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/herbivore_herbs_server.dir/link.d CMakeFiles/herbivore_herbs_server.dir/src/server.cpp.o -o herbivore_herbs_server

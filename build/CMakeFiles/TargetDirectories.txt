@@ -1,0 +1,3 @@
+/home/amrit.gangwar/Documents/HerbivoreHerbsWeb/build/CMakeFiles/herbivore_herbs_server.dir
+/home/amrit.gangwar/Documents/HerbivoreHerbsWeb/build/CMakeFiles/edit_cache.dir
+/home/amrit.gangwar/Documents/HerbivoreHerbsWeb/build/CMakeFiles/rebuild_cache.dir

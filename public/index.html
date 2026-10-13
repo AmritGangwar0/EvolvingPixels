@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Herbivore & Herbs Evolution</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="brand"><span class="dot"></span>
+            <div><strong>Herbivore & Herbs</strong><small>Evolution simulator</small></div>
+        </div>
+        <div class="actions"><span id="status">Connecting to engine…</span><button id="pause">Pause</button><button
+                class="secondary" id="save">Save</button><button class="secondary" id="reset">Reset</button></div>
+    </header>
+    <main>
+        <section class="stage">
+            <div class="stage-head">
+                <div>
+                    <h1>Living ecosystem</h1>
+                    <p>Watch the evolution of a simple ecosystem with herbs, herbivores, carnivores, omnivores and cannibals.</p>
+                </div>
+                <div class="live"><i></i> LIVE SIMULATION</div>
+            </div><canvas id="world"></canvas>
+            <div class="legend"><span><i class="herb"></i> Herbs</span><span><i class="herbivore"></i>
+                    Herbivores</span><span><i class="carnivore"></i> Carnivores</span><span><i class="omnivore"></i>
+                    Omnivores</span><span><i class="cannibal"></i> Cannibals</span></div>
+        </section>
+        <aside>
+            <div class="panel-title">Population <span>LIVE</span></div>
+            <div class="metric"><span>Herbs</span><b id="herbs">—</b>
+                <div class="bar green"><i id="bar-herbs"></i></div>
+            </div>
+            <div class="metric"><span>Herbivores</span><b id="herbivore">—</b>
+                <div class="bar pink"><i id="bar-herbivore"></i></div>
+            </div>
+            <div class="metric"><span>Carnivores</span><b id="carnivore">—</b>
+                <div class="bar red"><i id="bar-carnivore"></i></div>
+            </div>
+            <div class="metric"><span>Omnivores</span><b id="omnivore">—</b>
+                <div class="bar yellow"><i id="bar-omnivore"></i></div>
+            </div>
+            <div class="metric"><span>Cannibals</span><b id="cannibal">—</b>
+                <div class="bar purple"><i id="bar-cannibal"></i></div>
+            </div>
+            <div class="divider"></div>
+            <div class="facts">
+                <div><span>Simulation time</span><b id="time">0.0 s</b></div>   
+            </div>
+             </aside>
+    </main>
+    <script src="/app.js"></script>
+</body>
+
+</html>
